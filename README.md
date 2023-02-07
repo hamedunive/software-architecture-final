@@ -29,7 +29,7 @@ git clone https://github.com/maryamjavid/Software-Architecture.git
 - Edit your Profile (optional)
 - Complete one or more challenges!
 
-### As a Company
+### As a Company:
 - Sign Up and Login!
 - Check who did the tasks (challenges) and review them.
 
