@@ -1,7 +1,7 @@
-# Recruiting and Hiring Tool for Developers
+## Recruiting and Hiring Tool for Developers
 A web-based tool that streamlines the recruitment and hiring process for developers in an organization. 
 
-## Features
+### Features
 - Programming challenges 
 - Code review and assessment 
 - Hiring decision-making 
@@ -11,8 +11,8 @@ A web-based tool that streamlines the recruitment and hiring process for develop
 git clone https://github.com/maryamjavid/Software-Architecture.git
 
 2. Run Docker: 
-docker-compose build
-docker-compose up -d
+- docker-compose build
+- docker-compose up -d
 
 3. Import the SQL file: 
    1. Clone the SQL file from this address: https://github.com/maryamjavid/MySQL.git
@@ -38,6 +38,7 @@ The application uses N-tier architecture, which is divided into three layers:
 - Front-end
 - Back-end
 - Database 
+
 This architecture prioritizes simplicity and ease of understanding in coding while keeping modularity.
 
 ## Programming Language
