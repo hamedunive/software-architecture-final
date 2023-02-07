@@ -42,4 +42,4 @@ The application uses N-tier architecture, which is divided into three layers:
 This architecture prioritizes simplicity and ease of understanding in coding while keeping modularity.
 
 ## Programming Language
-The project is developed using PHP as the programming language and Laravel as the library.
+The project is developed using PHP as the programming language and Laravel as the library. It uses MVC architecture.
