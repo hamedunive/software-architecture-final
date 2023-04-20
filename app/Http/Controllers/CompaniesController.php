@@ -59,7 +59,7 @@ class CompaniesController extends Controller
     }
      public function logout(){
       Auth::logout();
-      return redirect()->route('index');
+      return redirect()->route('loginCompany');
      }
      public function profile(){
        return view('companies.profile');
