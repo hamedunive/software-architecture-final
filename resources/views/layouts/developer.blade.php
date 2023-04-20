@@ -1,5 +1,5 @@
 @if(!\Illuminate\Support\Facades\Auth::check() ) 
-  {{ redirect()->route('index') }}
+  {{ redirect()->route('loginCompany') }}
 @endif
 <html lang="en">
 <head>
@@ -94,7 +94,7 @@
 <body style="background:#f3f7f7">
     <div class="top-header">
         <div class="container">
-            <a href="{{route('index')}}"><img src="/files/images/logoWhite.png" alt=""><span class='logo'>HackerRank</span></a>
+            <a href="{{ env('LANDING_PAGE_URL') }}"><img src="/files/images/logoWhite.png" alt=""><span class='logo'>HackerRank</span></a>
             <div class="dropdown">
                 <i class="far fa-user"></i>
                 <span class='title'>{{ Illuminate\Support\Facades\Auth::user()->name }}</span>
@@ -103,16 +103,14 @@
                 <div class="dropdown-body">
                     <span class="hackos">HackoS:101</span>
                     <ul>
-                        @if(Illuminate\Support\Facades\Auth::user()->role == 'D' )
-                            <li><a href="{{ route('developerDashboard') }}"><i class="fas fa-clipboard-list"></i>Dashboard</a></li>
-                            <li><a href="{{ route('profileDeveloper') }}"><i class="far fa-address-card"></i>Profile</a></li>
-                            <li><a href="{{ route('logoutDeveloper') }}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
-                        @endif
-                        @if(Illuminate\Support\Facades\Auth::user()->role == 'C' )
-                            <li><a href="{{ route('companyDashboard') }}"><i class="fas fa-clipboard-list"></i>Dashboard</a></li>
-                            <li><a href="{{ route('profileCompany') }}"><i class="far fa-address-card"></i>Profile</a></li>
-                            <li><a href="{{ route('logoutCompany') }}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
-                        @endif
+                        {{-- @if(Illuminate\Support\Facades\Auth::user()->role == 'D' )
+                            <li><a href="{{ env('APP_URL') . env('DEVELOPER_LOGIN_DASHBOARD_URL') }}"><i class="fas fa-clipboard-list"></i>Dashboard</a></li>
+                            <li><a href="{{ env('APP_URL') . env('DEVELOPER_LOGIN_PROFILE_URL') }}"><i class="far fa-address-card"></i>Profile</a></li>
+                            <li><a href="{{ env('APP_URL') . env('DEVELOPER_LOGIN_LOGOUT_URL') }}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                        @endif --}}
+                        <li><a href="{{ route('companyDashboard') }}"><i class="fas fa-clipboard-list"></i>Dashboard</a></li>
+                        <li><a href="{{ route('profileCompany') }}"><i class="far fa-address-card"></i>Profile</a></li>
+                        <li><a href="{{ route('logoutCompany') }}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
                     </ul>
                 </div>
             </div>
