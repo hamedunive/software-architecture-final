@@ -16,7 +16,7 @@
     </div>
     <div class="header container">
          <div class="logo">
-            <a href="{{ route('index') }}"><img src="/files/images/logo.png" alt=""></a>
+            <a href="{{ env("APP_URL") . env("LANDING_PAGE_URL") }}"><img src="/files/images/logo.png" alt=""></a>
          </div>
          <!-- <div class="navbar">
             <ul>
@@ -27,8 +27,8 @@
             </ul>
          </div> -->
          <div class="loginRegister ">
-             <a class="login" href="{{ route('login') }}" >Login</a>
-             <a class="register" href="{{ route('register') }}" >Register</a>
+             <a class="login" href="{{ env('APP_URL') . env('LANDING_PAGE_LOGIN_URL') }}" >Login</a>
+             <a class="register" href="{{ env('APP_URL') . env('LANDING_PAGE_REGISTER_URL') }}" >Register</a>
          </div>
     </div>
     @yield('content')
